@@ -11,7 +11,7 @@ Scripts will need kWave toolbox (http://www.k-wave.org/) and CurveLab-2.1.3 (htt
 
 Content:
 - Limited-angle PAT Fourier operators with basic use example
-- Fully Wedge Restricted Curvelet transform in 2D with basic use example
+- Fully Wedge Restricted Curvelet transform (FWRC) in 2D with basic use example
 - Coronae-Net and ResCoronae-Net implementation in 2D 
 
 ###### Thank you for using our code, kindly report any suggestions to the corresponding author.
