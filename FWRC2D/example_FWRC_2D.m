@@ -1,5 +1,6 @@
 % An example to demonstrate fully wedge restricted Curvelet transform on 2D 
-% ellipse phantom with line sensors geometry.
+% ellipse phantom with line sensors geometry and compute the corresponding
+% Coronae Coefficients
 %
 % Add k-wave and Curvelet toolbox into the path for running this script.
 %
@@ -107,4 +108,40 @@ subplot(2,3,3);imagesc(p0rec_f);title('p0FWRC');axis image;colorbar
 subplot(2,3,4);imagesc(p0rec-p0);title('p0C - p0');axis image;colorbar
 subplot(2,3,5);imagesc(p0rec_-p0);title('p0WRC - p0');axis image;colorbar
 subplot(2,3,6);imagesc(p0rec_f-p0);title('p0FWRC - p0');axis image;colorbar
+
+
+%% compute Coronae Coefficients
+cs_transform_image = cs_transform_p0; 
+cs_transform_image.setting = cs_transform_p0_.setting;
+cs_transform_image.rCurvelets_p0 = rCurvelets_p0;
+
+% get visible images
+addNoise = 0;
+mode = 'invisible';
+format = 'non-split';
+
+% get coefficient of single image
+C = cs_transform_image.unvectPsi(cs_transform_image.Psi(p0));
+
+% decompose coarse scale into visible and invisible parts
+switch mode
+    case 'all'
+        decompC = C;
+    case 'invisible'
+        decompC = decompCoarseScale(C,cs_transform_image.theta,cs_transform_image.setting);
+end
+
+% get visible coefficients in image domain 
+CorCoeffs = getCurveletImage(decompC, cs_transform_image, addNoise, mode, format);
+
+
+%% display Coronae Coefficients
+subplot(3,2,1);imagesc(squeeze(CorCoeffs{1}(1,:,:)));axis image;colorbar;title('Q_C^{vis}')
+subplot(3,2,2);imagesc(squeeze(CorCoeffs{1}(2,:,:)));axis image;colorbar;title('Q_C^{inv}')
+subplot(3,2,3);imagesc(squeeze(CorCoeffs{2}(1,:,:)));axis image;colorbar;title('Q_SF^{vis}')
+subplot(3,2,4);imagesc(squeeze(CorCoeffs{2}(2,:,:)));axis image;colorbar;title('Q_SF^{inv}')
+subplot(3,2,5);imagesc(squeeze(CorCoeffs{3}(1,:,:)));axis image;colorbar;title('Q_F^{vis}')
+subplot(3,2,6);imagesc(squeeze(CorCoeffs{3}(2,:,:)));axis image;colorbar;title('Q_F^{inv}')
+
+
 
