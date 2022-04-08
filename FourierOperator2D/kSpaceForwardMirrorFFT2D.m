@@ -21,7 +21,7 @@ function f = kSpaceForwardMirrorFFT2D(p,setting)
 %      f  - the PAT sensor data
 %
 %
-% Copy right (C) 2022 Bolin Pan & Marta M. Betcke
+% Copyright (C) 2022 Bolin Pan & Marta M. Betcke
 
 
 % interpolation method
