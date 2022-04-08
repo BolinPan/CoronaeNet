@@ -18,6 +18,8 @@ function x = computeCurveletImage(C, is_real, M, N, sCoeff, mode)
 %
 % By Laurent Demanet, 2004
 % Modified by Bolin Pan 2020 (recover coefficient in image domain)
+%
+% Copyright (C) 2022 Bolin Pan & Marta M. Betcke
 
 
 % Initialization

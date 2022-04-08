@@ -17,7 +17,7 @@ function x = getCurveletImage(C, cs_transform, addNoise, mode, format)
 %   x         - curvelet coefficients in image domain
 %
 %
-% Bolin Pan 2020 
+% Copyright (C) 2022 Bolin Pan & Marta M. Betcke
 
 
 % obtain cs_transform info
