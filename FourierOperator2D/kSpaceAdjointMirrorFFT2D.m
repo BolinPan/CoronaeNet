@@ -21,7 +21,7 @@ function p = kSpaceAdjointMirrorFFT2D(f,setting)
 %      p  - reconstructed image
 %
 %
-% Copy right (C) 2022 Bolin Pan & Marta M. Betcke
+% Copyright (C) 2022 Bolin Pan & Marta M. Betcke
 
 
 % skip warning massages
