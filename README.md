@@ -4,7 +4,7 @@
 - **Author:** Bolin Pan, Marta M. Betcke
 - **Institution:** University College London
 - **Email:** bolin.pan.15@ucl.ac.uk
-- **Related publication:** This repository will collect codes accompanying the publication: Bolin Pan, Marta M. Betcke "On Learning the Invisible in Photoacoustic Tomography with Flat Directionally Sensitive Detector", 
+- **Related publication:** This repository will collect codes accompanying the publication: Bolin Pan and Marta M. Betcke "On Learning the Invisible in Photoacoustic Tomography with Flat Directionally Sensitive Detector", 
 
 Scripts will need kWave toolbox (http://www.k-wave.org/) and CurveLab-2.1.3 (http://www.curvelet.org/)
 - **2D Curvelet Transform:** MATLAB implementation
