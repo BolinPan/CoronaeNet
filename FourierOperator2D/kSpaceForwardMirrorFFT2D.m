@@ -2,7 +2,7 @@ function f = kSpaceForwardMirrorFFT2D(p,setting)
 % kSpaceForwardMirrorFFT2D.m - returns the PAT data obtained from
 % limited-angle Forward Fourier PAT operator in flat sensor geometry
 %
-% Note: This function contains original kWave code!!
+% Note: The core structure of this code is based on the Fourier inversion in k-wave toolbox kspaceLineRecon.m
 %
 %
 % Inputs:
