@@ -2,7 +2,7 @@ function p = kSpaceInverseMirrorFFT2D(f,setting)
 % kSpaceInverseMirrorFFT2D.m - recovers PAT image from PAT data via
 % limited-angle Inverse Fourier PAT operator in flat sensor geometry
 %
-% Note: This function contains original kWave code!!
+% Note: The core structure of this code is based on the Fourier inversion in k-wave toolbox kspaceLineRecon.m
 %
 %
 % Inputs:
